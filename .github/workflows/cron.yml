@@ -13,7 +13,9 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  cron:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
 
     steps:
