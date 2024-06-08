@@ -49,7 +49,7 @@ def do_version(version: str, csv: bool = False) -> None:
         return
 
     if csv:
-        print(f"{version},{date.isoformat()}")
+        print(f"{date.isoformat()},{version}")
     else:
         hours = calc_hours_since(date)
         print(
