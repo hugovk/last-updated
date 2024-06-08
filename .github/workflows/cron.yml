@@ -27,13 +27,13 @@ jobs:
       - name: Generate
         run: |
           python -m pip install -r requirements.txt
-          python last-updated.py --csv >> last-updated.csv
+          python last_updated.py --csv >> last_updated.csv
           # Deduplicate
-          awk -i inplace '!seen[$0]++' last-updated.csv
+          awk -i inplace '!seen[$0]++' last_updated.csv
       - name: Commit
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add last-updated.csv
+          git add last_updated.csv
           git commit -m "Updates for $(date)" || true
           git push
