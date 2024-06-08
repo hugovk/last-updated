@@ -33,7 +33,7 @@ def find_last_updated(html: str) -> dt.datetime | None:
     return None
 
 
-def calc_hours_since(date: dt.datetime) -> float | None:
+def calc_hours_since(date: dt.datetime) -> float:
     now = dt.datetime.now(dt.UTC)
     diff = now - date
     hours = diff.total_seconds() / 3600
