@@ -37,3 +37,6 @@ jobs:
           git add last_updated.csv
           git commit -m "Updates for $(date)" || true
           git push
+      - name: Deploy diffs
+        run: |
+          python deploy_diffs.py
