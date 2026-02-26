@@ -65,7 +65,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--versions",
-        default="3.12,3.13,3.14",
+        default="3.13,3.14,3.15",
         help="comma-separated versions",
     )
     parser.add_argument("--csv", action="store_true", help="output as CSV")
